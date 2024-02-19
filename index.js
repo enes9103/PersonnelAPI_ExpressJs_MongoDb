@@ -39,6 +39,7 @@ app.use(require("./src/middlewares/findSearchSortPage"));
 
 /* ------------------------------------------------------- */
 // Routes:
+
 // HomePath:
 app.all("/", (req, res) => {
   res.send({
@@ -47,7 +48,8 @@ app.all("/", (req, res) => {
   });
 });
 
-
+// /departments
+app.use("/departments", require("./src/routes/department.router"));
 
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */
